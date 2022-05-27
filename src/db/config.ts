@@ -29,7 +29,12 @@ const connection = new Sequelize({
   password: POSTGRES_PASSWORD,
   database: POSTGRES_DBNAME,
   logging: false,
-  ssl: true,
+  dialectOptions: {
+    ssl: {
+      require: true, // This will help you. But you will see nwe error
+      rejectUnauthorized: false // This line will fix new error
+    }
+  },
   models: [Account, PhoneNumber],
 });
 
