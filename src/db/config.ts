@@ -29,6 +29,7 @@ const connection = new Sequelize({
   password: POSTGRES_PASSWORD,
   database: POSTGRES_DBNAME,
   logging: false,
+  ssl: true,
   models: [Account, PhoneNumber],
 });
 
