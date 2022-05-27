@@ -7,6 +7,8 @@
     "db:import": "psql -U postgres talentupdb < schema.sql",
     "dev": "tsc -p . && node ./dist/index.js",
     "start:dev": "nodemon index.ts",
+    "postinstall": "tsc",
+    "start": "node dist/src/index.js",
     "test": "mocha --reporter spec"
   },
   "keywords": [],
