@@ -14,7 +14,7 @@
 `npm run test` or `yarn run test`
 
 
-- Each abi request takes a authorization header
+- Each api endpoint `/inbound/sms` and `/outbound/sms` takes a authorization header
 ```
 const authToken = Buffer.from(`${username}:${auth_id}`).toString("base64");
 
