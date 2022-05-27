@@ -2,12 +2,12 @@
   "name": "talentup-svc",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "db:import": "psql -U postgres talentupdb < schema.sql",
     "dev": "tsc -p . && node ./dist/index.js",
     "start:dev": "nodemon index.ts",
-    "postinstall": "tsc -p .",
+    "postinstall": "tsc",
     "start": "node dist/index.js",
     "test": "mocha --reporter spec"
   },
