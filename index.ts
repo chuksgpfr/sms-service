@@ -7,7 +7,7 @@ import client from "./src/config/redis";
 dotenv.config();
 
 const app: Express = express();
-const port = process.env.PORT as string;
+const port = process.env.PORT;
 
 app.use(express.json())
 
@@ -17,7 +17,7 @@ const start = async (): Promise<void> => {
   try {
     await connection.sync();
     await client.connect();
-    app.listen(parseInt(port), "0.0.0.0", () => {
+    app.listen(port, () => {
       console.log(`Server is running at location http://localhost:${port}`);
     });
   } catch (error) {

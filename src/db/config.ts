@@ -22,7 +22,7 @@ const POSTGRES_DBNAME = process.env.POSTGRES_DBNAME as string;
 
 
 
-const connection = NODE_ENV === "production" ? new Sequelize(POSTGRES_URL) :  new Sequelize({
+const connection = new Sequelize({
   dialect: "postgres",
   host: POSTGRES_HOST,
   username: POSTGRES_USERNAME,
